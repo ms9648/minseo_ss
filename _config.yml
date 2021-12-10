@@ -10,15 +10,15 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# theme                  : "minimal-mistakes-jekyll"
+theme                  : "minimal-mistakes-jekyll"
 remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" 
 
 # Site Settings
 locale                   : "en-US"
-title                    : "크고싶은아이"
+title                    : "Site Title"
 title_separator          : "-"
-subtitle                 : "김민서 성장기"
+subtitle                 : ""
 name                     : "Kim Minseo"
 description              : "Minseo's growth dairy"
 url                      : "https://minseo_ss.github.io"
