@@ -1,37 +1,46 @@
-## Welcome to GitHub Pages
+# GDSC UOS TEAM BLOG
 
-You can use the [editor on GitHub](https://github.com/ms9648/minseo_ss.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+GDSC UOS에서 자체 운영하는 팀 블로그입니다!
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+:point_right: [Link](https://gdsc-university-of-seoul.github.io/)
 
-### Markdown
+<br />
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+포스팅 PR을 하러 오셨다면 `CONTRIBUTING.md`를 참고해주세요!
 
-```markdown
-Syntax highlighted code block
+:point_right: [Link](https://github.com/GDSC-University-of-Seoul/gdsc-university-of-seoul.github.io/blob/master/CONTRIBUTING.md)
 
-# Header 1
-## Header 2
-### Header 3
+## Stacks
 
-- Bulleted
-- List
+<div>
+	<a href="#" target="_blank">
+		<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"/>
+	</a>
+	<a href="#" target="_blank">
+		<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"/>
+	</a>
+	<a href="#" target="_blank">
+		<img src="https://img.shields.io/badge/Jekyll-CC0000?style=flat-square&logo=Jekyll&logoColor=white"/>
+	</a>
+	<a href="#" target="_blank">
+		<img src="https://img.shields.io/badge/Markdown-000000?style=flat-square&logo=Markdown&logoColor=white"/>
+	</a>
+</div>
 
-1. Numbered
-2. List
+## Contributors
 
-**Bold** and _Italic_ and `Code` text
+### 20 F/W
 
-[Link](url) and ![Image](src)
-```
+[Ukjae Jeong(Jay)](https://github.com/jeongukjae)|[Enoch Kim](https://github.com/Enoch-Kim)|[MOBUMIN](https://github.com/MOBUMIN)|[Minsik Choi](https://github.com/min6choi)
+|:---:|:---:|:---:|:---:|
+<img src="https://github.com/jeongukjae.png">|<img src="https://github.com/enoch-kim.png">|<img src="https://github.com/mobumin.png">|<img src="https://github.com/min6choi.png">
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+### 21 S/S
 
-### Jekyll Themes
+[Ukjae Jeong(Jay)](https://github.com/jeongukjae)|[Enoch Kim](https://github.com/Enoch-Kim)|[MOBUMIN](https://github.com/MOBUMIN)|[Minsik Choi](https://github.com/min6choi)|
+|:---:|:---:|:---:|:---:|
+<img src="https://github.com/jeongukjae.png">|<img src="https://github.com/enoch-kim.png">|<img src="https://github.com/mobumin.png">|<img src="https://github.com/min6choi.png">
+[**LeeMir**](https://github.com/LeeMir)|[**hyehyeonmoon**](https://github.com/hyehyeonmoon)|[**yuniwisdom**](https://github.com/yuniwisdom)
+|<img src="https://github.com/leemir.png">|<img src="https://github.com/hyehyeonmoon.png">|<img src="https://github.com/yuniwisdom.png">
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ms9648/minseo_ss.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### 21 F/W
