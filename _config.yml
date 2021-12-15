@@ -1,6 +1,6 @@
 # Site
-name: "크고싶은아이"
-description: "Minseo's Growth Diary"
+name: "GDSC UOS"
+description: "GDSC UOS 블로그입니다."
 
 baseurl:
 include: ["_pages"]
@@ -8,8 +8,8 @@ permalink: /:title/
 
 logo: 'assets/images/dsclogo.png'
 full_logo: 'assets/images/dsc_full_logo.png'
-# google_analytics: 'UA-179269963-1'
-# disqus: 'dscuos'
+google_analytics: 'UA-179269963-1'
+disqus: 'dscuos'
 
 # Plugins
 plugins:
@@ -40,3 +40,4 @@ exclude:
   - .git
   - .gitignore
   - .DS_Store
+  - CONTRIBUTING.md
