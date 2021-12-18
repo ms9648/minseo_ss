@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<section>
+    <div class='section-title'>
+        <h2>
+            <span class='active'>{{ page.title }}</span>
+        </h2>
+    </div>
+
+    <div class='article-post'>
+        {{content}}
+    </div>
+    
+    <div class='member-alumni-container'>
+        <div class='member-info-container'>
+            <!-- special -->
+            <div>
+                <h4><span><b>Specialist</b></span></h4><br/>    
+                <div class='minseo3'>
+                    {% assign authors = site.data.author | where: 'special', 'true' %}
+                    {% for author in authors %}
+                        {% if author.special == true %}
+                            {% include authorbox.html %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        /* Slide */
+        const tabs = {
+            about: document.querySelector('.section-title .active'),
+        }
+        const infoContainer = document.querySelector('.member-special-container');
+        const memberContainer = document.querySelector('.member-info-container');
+        tabs.about.addEventListener('click', (e) => {
+            tabs.about.classList.add('active');
+            memberContainer.classList.add('slide-right');
+            memberContainer.classList.remove('slide-left');
+        });
+    </script>
+</section>
