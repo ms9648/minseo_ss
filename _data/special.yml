@@ -1,0 +1,21 @@
+hojunee:
+  name: 이호준
+  display_name: 호준
+  email: relativity1915@gmail.com
+  github: hojunee
+  role: lead
+  member: false
+  alumni: true
+  special: true
+  web:
+Enoch-Kim:
+  name: 김유현
+  display_name: 유현
+  email: enochkim1220@gmail.com
+  github: Enoch-Kim
+  role: core
+  member: false
+  alumni: true
+  special: true
+  blog_team: true
+  web:

@@ -13,35 +13,43 @@ layout: default
         {{content}}
     </div>
     
-    <div class='member-alumni-container'>
-        <div class='member-info-container'>
-            <!-- special -->
-            <div>
-                <h4><span><b>Specialist</b></span></h4><br/>    
-                <div class='minseo3'>
-                    {% assign authors = site.data.author | where: 'special', 'true' %}
-                    {% for author in authors %}
-                        {% if author.special == true %}
-                            {% include authorbox.html %}
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
+    <div class = 'special-alumni-background'>
+        <h4><span><b>Specialist</b></span></h4><br/>
+        {% assign specials = site.data.special | where: 'special', 'true' %}
+        {% for author in specials %}
+            {% if author.special == true %}
+                <div class = 'special-alumni-each'> {% include specialbox.html %} </div>
+                <button class = "special-button-style" type ="button">
+                    <b> 후원 내역 </b>
+                </button>
+            {% endif %}
+        {% endfor %}
     </div>
-
 
     <script>
         /* Slide */
         const tabs = {
             about: document.querySelector('.section-title .active'),
+            alumni: document.querySelector('.section-title .deactive')
         }
-        const infoContainer = document.querySelector('.member-special-container');
+        const infoContainer = document.querySelector('.member-alumni-container');
         const memberContainer = document.querySelector('.member-info-container');
+        const alumniContainer = document.querySelector('.alumni-info-container');
         tabs.about.addEventListener('click', (e) => {
             tabs.about.classList.add('active');
+            tabs.alumni.classList.remove('active');
             memberContainer.classList.add('slide-right');
+            alumniContainer.classList.add('slide-right');
             memberContainer.classList.remove('slide-left');
+            alumniContainer.classList.remove('slide-left');
+        });
+        tabs.alumni.addEventListener('click', (e) => {
+            tabs.about.classList.remove('active');
+            tabs.alumni.classList.add('active');
+            memberContainer.classList.remove('slide-right');
+            alumniContainer.classList.remove('slide-right');
+            memberContainer.classList.add('slide-left');
+            alumniContainer.classList.add('slide-left');
         });
     </script>
 </section>

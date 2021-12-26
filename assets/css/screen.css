@@ -9,6 +9,7 @@ License: https://www.wowthemes.net/freebies-license/
     --white-color: #F8F9FA;
     --black-color: #202124;
     --red-color: #EA4335;
+
     --yellow-color: #FBBC05;
     --green-color: #34A853;
     --blue-color: #2254AF;
@@ -1075,4 +1076,48 @@ img + em {
     text-align: center;
     font-size: .8rem;
     color: #888888;
+}
+
+.fire .special-img {
+    padding: 10px 10px 10px 10px;
+    object-fit: cover;
+    text-align: left;
+    vertical-align: top;
+}
+
+.fire .img-circle1 {
+    width: 80%;
+    border-radius: 80%;
+    /* border: 1px solid rgba(0,0,0,.125); */
+    border: 0.5px solid var(--light-black-color);
+    vertical-align: top;
+    text-align: left;
+}
+
+.test {
+    text-align:justify;
+    justify-content: end;
+}
+.fire .special-body {
+    padding: 0px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+
+.fire {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.special-button-style {
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 5px;
+    border-color: white;
 }
