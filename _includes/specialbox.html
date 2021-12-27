@@ -1,11 +1,12 @@
 <!-- begin authorbox -->
 {% capture className %} img-circle1 {% endcapture %}
 {% if author.blog_team == true %}
-{% capture className %} img-circle author-blog-team-border1 {% endcapture %}
+{% capture className %} img-circle1 author-blog-team-border1 {% endcapture %}
 {% endif %}
 <!-- conditional-rendering authorbox or blank -->
 {% if author.name != "_blank" %}
 <div class="fire">
+
     <div class="special-img">
         {% if site.lazyimages == "enabled" %}
         {% assign className = className | append: " lazyimg" %}
@@ -18,9 +19,16 @@
     </div>
     <div class = "test">
         <div class="special-body">
-            <h2 class="author-title">
+            <div class = "special-gdsc-img">
+                <img src = "assets\images\dsclogo.png">
+            </div>
+
+            <h2 class="special-author-title">
                 <span class="top-author-name">{{ author.name }}</span>
             </h2>
+            <h3 class = "special-comment">
+                {{ author.comment }}
+            </h3>
             <div class="author-icon-wrapper">
                 <span class="author-icon"><a class="link-dark" href="mailto:{{ author.email }}"><i
                             class="far fa-envelope"></i></a></span>
@@ -29,9 +37,6 @@
                 {% if author.web %}
                 <span class="author-icon"><a class="link-dark" href="{{ author.web }}"><i
                             class="fas fa-blog"></i></a></span>
-                {% endif %}
-                {% if author.special %}
-                
                 {% endif %}
             </div>
         </div>

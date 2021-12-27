@@ -1081,8 +1081,7 @@ img + em {
 .fire .special-img {
     padding: 10px 10px 10px 10px;
     object-fit: cover;
-    text-align: left;
-    vertical-align: top;
+    text-align: center;
 }
 
 .fire .img-circle1 {
@@ -1090,27 +1089,30 @@ img + em {
     border-radius: 80%;
     /* border: 1px solid rgba(0,0,0,.125); */
     border: 0.5px solid var(--light-black-color);
-    vertical-align: top;
     text-align: left;
 }
 
-.test {
-    text-align:justify;
-    justify-content: end;
+.fire .test {
+    text-align: right;
+    margin: 0px 20px 0px 20px;
+    position: relative;
+    
 }
-.fire .special-body {
+.special-body {
     padding: 0px 20px 0px 20px;
     display: flex;
     flex-direction: column;
     text-align: center;
+    justify-self: center;
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    float: right;
 }
 
 
 .fire {
     display: flex;
     flex-direction: row;
-    text-align: center;
+    text-align: right;
 }
 
 .special-button-style {
@@ -1120,4 +1122,31 @@ img + em {
     background-color: white;
     border-radius: 5px;
     border-color: white;
+}
+
+.special-alumni-each {
+    margin-bottom: 100px;
+}
+
+.special-author-title {
+    text-align: center;
+    font-size: 50px;
+}
+
+.special-comment {
+    font-family: 'Tahoma';
+    width:max-content;
+}
+
+.special-detail {
+    width:max-content;
+}
+
+.special-detail-content {
+    width:max-content;
+}
+
+.special-gdsc-img {
+    width: 50px;
+    align-self:flex-end;
 }

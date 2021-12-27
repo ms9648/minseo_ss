@@ -18,10 +18,12 @@ layout: default
         {% assign specials = site.data.special | where: 'special', 'true' %}
         {% for author in specials %}
             {% if author.special == true %}
-                <div class = 'special-alumni-each'> {% include specialbox.html %} </div>
-                <button class = "special-button-style" type ="button">
-                    <b> 후원 내역 </b>
-                </button>
+                <div class = 'special-alumni-each'> {% include specialbox.html %}
+                    <details class = 'special-detail'>
+                        <summary class="fas fa-align-justify"> 후원 내역 </summary>
+                        <p class = 'special-detail-content'> {{ author.content}} </p>
+                    </details>
+                </div>
             {% endif %}
         {% endfor %}
     </div>
