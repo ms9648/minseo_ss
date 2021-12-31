@@ -1,13 +1,7 @@
-<!-- begin authorbox -->
-{% capture className %} img-circle {% endcapture %}
-{% if author.blog_team == true %}
-{% capture className %} img-circle author-blog-team-border {% endcapture %}
-{% endif %}
 <!-- conditional-rendering authorbox or blank -->
 {% if author.name != "_blank" %}
-<div class="col-lg-3 col-md-6 mb-30px card-group">
-    <div class="author h-100">
-        <span class = "special-icon"><i class="fas fa-award"></i></span>
+<div class="special-detail-member-group">
+    <div class="special-member-each-box">
         <div class="author-img">
             {% if site.lazyimages == "enabled" %}
             {% assign className = className | append: " lazyimg" %}
@@ -18,10 +12,14 @@
             <img class= "{{ className }}" src="https://github.com/{{author.github}}.png" alt="{{ author.name }}">
             {% endif %}
         </div>
-        <div class="author-body">
+
+        <div class = "special-member-body">
             <h2 class="author-title">
                 <span class="top-author-name">{{ author.name }}</span>
             </h2>
+            <h3 class = "special-alumni-term">
+                <span class="top-author-name">{{ author.comment }}</span>
+            </h3>
             <div class="author-icon-wrapper">
                 <span class="author-icon"><a class="link-dark" href="mailto:{{ author.email }}"><i
                             class="far fa-envelope"></i></a></span>
@@ -39,6 +37,19 @@
 
         </div>
     </div>
+
+    <div class='section-title'>
+        <h2>
+            <span class='active'>후원 내역</span>
+        </h2>
+    </div>
+    {% if author.special %}
+        <span class = "top-author-name">
+            {% for content in author.contents %}
+                {{ content }}{{\n}}
+            {% endfor %}
+        </span>
+    {% endif %}
 </div>
 
 {% else %}

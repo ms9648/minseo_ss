@@ -9,8 +9,7 @@ hojunee:
   special: true
   web:
   comment: 20-21 GDSC UOS Member
-  content: 후원 내역을 입력해주세요!
-
+  contents: [읽기, 쓰기]
 Enoch-Kim:
   name: 김유현
   display_name: 유현
@@ -23,7 +22,7 @@ Enoch-Kim:
   blog_team: true
   web:
   comment: 20-21 GDSC UOS Member
-  content: 후원 내역을 입력해주세요!
+  contents: 후원 내역을 입력해주세요!
 
 lsh110600:
   name: 이상헌
@@ -36,4 +35,4 @@ lsh110600:
   special: true
   web:
   comment: 20-21 GDSC UOS Member
-  content: 후원 내역을 입력해주세요!
+  contents: 후원 내역을 입력해주세요!

@@ -1,0 +1,79 @@
+---
+layout: default
+---
+
+<div class="menu"><i class="fas fa-bars"></i></div>
+<div class="side">
+    <div class = "closeButton"><i class="fas fa-times"></i></div>
+</div>
+
+<section>
+    <div class='section-title'>
+        <h2>
+            <span class='active'>후원 내역</span>
+        </h2>
+    </div>
+    <div>
+        <div class='special-member-box'>
+            {% assign authors = site.data.special | where: 'special', 'true' %}
+            {% for author in authors %}
+                {% include specialdetail.html %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    const menu = document.getElementsByClassName('menu')[0]
+    const closeButton = document.getElementsByClassName('closeButton')[0]
+    const side = document.getElementsByClassName('side')[0]
+
+    menu.addEventListener('click', () => {
+        side.style.display = 'inline-block';
+    })
+
+    closeButton.addEventListener('click', () => {
+        side.style.display = 'none';
+    })
+</script>
+
+
+
+
+<style>
+    body {
+        margin: 0;
+    }
+    
+    .menu {
+        position: absolute;
+        top:10%;
+        left: 2%;
+        width: 30px;
+        height: 30px;
+        margin: 30px 0 0 30px;
+        cursor: pointer;
+        justify-content: center;
+    }
+    
+    .side {
+        position: absolute;
+        left:0%;
+        top: 0;
+        width: 20%;
+        height: 100%;
+        background-color: #D3D3D3;
+    }
+    
+    .closeButton {
+        position: absolute;
+        top: 10%;
+        left: 2%;
+        width: 30px;
+        height: 30px;
+        margin: 30px 0 0 30px;
+        cursor: pointer;
+    }
+</style>
