@@ -1078,6 +1078,8 @@ img + em {
     color: #888888;
 }
 
+
+/* specialdetail.html: specialist img & box*/
 .special-member-box {
     text-align: center;
     display:flex;
@@ -1090,133 +1092,61 @@ img + em {
     justify-content: center;
     margin-bottom: 50px;
 }
-
+/* 사진 */
+.special-img {
+    padding: 20px 50px 20px 50px;
+    object-fit: cover;
+    text-align: center;
+    width: 40%;
+}
+/* 이름, 기간 */
 .special-member-body {
     position: relative;
     width: 60%;
-    align-self: center;
 }
 
-
-
-
-.special-icon{
-    font-size: 30px;
-    float: left;
+.special-img-box {
+    text-align: end;
 }
-.fire .special-img {
-    padding: 10px 10px 10px 10px;
+.special-dsc-img {
+    width: 50pt;
+    margin-right: 80pt;
+}
+
+.special-title {
+    text-align: center;
+    font-size: 30pt;
+}
+
+.special-alumni-term {
+    text-align: center;
+    font-size: 30pt;
+}
+
+.special-icon-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.special-icon-wrapper .special-icon {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 25pt;
+}
+
+.special-img {
+    padding: 20px 50px 20px 50px;
     object-fit: cover;
     text-align: center;
 }
 
-.fire .img-circle1 {
-    width: 80%;
-    border-radius: 80%;
-    /* border: 1px solid rgba(0,0,0,.125); */
-    border: 0.5px solid var(--light-black-color);
+.special-contents-box {
     text-align: left;
 }
 
-.test {
-    text-align: right;
-    margin: 0px 20px 0px 20px;
-    position: relative;
-    top: 20%;
-    right: 0%;
-    
-}
-.special-body {
-    padding: 0px 20px 0px 20px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-self: center;
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    float: right;
-}
-
-
-.fire {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 50px;
-}
-
-.special-button-style {
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    background-color: white;
-    border-radius: 5px;
-    border-color: white;
-}
-
-.special-alumni-each {
-    margin-bottom: 100px;
-    margin: 0px 30px 0px 30px;
-}
-
-.special-author-title {
-    text-align: center;
-}
-
-.special-comment {
-    font-family: 'Tahoma';
-    width:max-content;
-}
-
-.special-detail {
-    width:max-content;
-}
-
-.special-detail-content {
-    width:max-content;
-}
-
-.special-gdsc-img {
-    width: 50px;
-    text-align: end;
-}
-
-.special-alumni-background {
-    display: flex;
-}
-
-
-
-*{margin:0;padding:0;}
-.hidden{display: none;}
-#bg{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left:0;
-    background-color: rgb(0,0,0,0.5);
-}
-#popup{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background-color: white;
-    padding: 20px;
-    text-align: center;
-    width: 20%;
-    height: auto;
-}
-#popup > h3{
-    border-bottom: 2px solid rgb(77, 77, 77);
-    padding: 10px 0;
-}
-#popup-text{
-    margin: 20px 0;
-}
-.button{
-    width: 100%;
-    height: 30px;
-    padding: 5px;
-    color: white;
-    background-color: rgb(77, 77, 77);
+.special-contents {
+    margin-left: 5%;
+    font-size: 25pt;
 }

@@ -9,7 +9,12 @@ hojunee:
   special: true
   web:
   comment: 20-21 GDSC UOS Member
-  contents: [읽기, 쓰기]
+  contents: {
+    '2021-12-31-햄버거 100만개 기부',
+    '2021-12-27-현금 1조원 기부'
+  }
+
+
 Enoch-Kim:
   name: 김유현
   display_name: 유현

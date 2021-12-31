@@ -2,7 +2,7 @@
 {% if author.name != "_blank" %}
 <div class="special-detail-member-group">
     <div class="special-member-each-box">
-        <div class="author-img">
+        <div class="special-img">
             {% if site.lazyimages == "enabled" %}
             {% assign className = className | append: " lazyimg" %}
             <img class= "{{ className }}"
@@ -14,24 +14,23 @@
         </div>
 
         <div class = "special-member-body">
-            <h2 class="author-title">
+            <div class = "special-img-box">
+                <img class = "special-dsc-img" src = assets/images/dsclogo.png>
+            </div>
+            <h2 class="special-title">
                 <span class="top-author-name">{{ author.name }}</span>
             </h2>
             <h3 class = "special-alumni-term">
                 <span class="top-author-name">{{ author.comment }}</span>
             </h3>
-            <div class="author-icon-wrapper">
-                <span class="author-icon"><a class="link-dark" href="mailto:{{ author.email }}"><i
+            <div class="special-icon-wrapper">
+                <span class="special-icon"><a class="link-dark" href="mailto:{{ author.email }}"><i
                             class="far fa-envelope"></i></a></span>
-                <span class="author-icon"><a class="link-dark" href="https://github.com/{{ author.github }}"><i
+                <span class="special-icon"><a class="link-dark" href="https://github.com/{{ author.github }}"><i
                             class="fab fa-github"></i></a></span>
                 {% if author.web %}
-                <span class="author-icon"><a class="link-dark" href="{{ author.web }}"><i
+                <span class="special-icon"><a class="link-dark" href="{{ author.web }}"><i
                             class="fas fa-blog"></i></a></span>
-                {% endif %}
-                {% if author.special %}
-                <span class="author-icon"><a class="link-dark" href="{{ site.baseurl }}/special-detail"><i
-                    class="fas fa-donate"></i></a></span>
                 {% endif %}
             </div>
 
@@ -43,13 +42,17 @@
             <span class='active'>후원 내역</span>
         </h2>
     </div>
-    {% if author.special %}
-        <span class = "top-author-name">
-            {% for content in author.contents %}
-                {{ content }}{{\n}}
+    <span class = "special-contents-box">
+        {% assign contents = author.contents %}
+            {% for i in contents %}
+                <li>
+                    <a href = "https://www.naver.com/">black</a>
+                    <span class = "date">
+                        {{ i }}
+                    </span>
+                </li>
             {% endfor %}
-        </span>
-    {% endif %}
+    </span>
 </div>
 
 {% else %}
