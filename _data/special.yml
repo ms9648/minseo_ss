@@ -9,10 +9,7 @@ hojunee:
   special: true
   web:
   comment: 20-21 GDSC UOS Member
-  contents: {
-    '2021-12-31-햄버거 100만개 기부',
-    '2021-12-27-현금 1조원 기부'
-  }
+  contents:
 
 
 Enoch-Kim:
