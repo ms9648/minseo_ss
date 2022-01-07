@@ -1,0 +1,50 @@
+1:
+  name: 이호준
+  github: hojunee
+  special: true
+  contents: "스타벅스"
+  when: '2022-01-07' 
+
+
+2:
+  name: 김유현
+  display_name: 유현
+  github: Enoch-Kim
+  special: true
+  contents: "천만원 기부"
+  when: '2022-01-07' 
+
+
+3:
+  name: 이상헌
+  display_name: 상헌
+  github: lsh110600
+  special: true
+  contents: "1억 기부"
+  when: '2021-12-03'
+
+4:
+  name: 이호준
+  display_name: 호준
+  github: hojunee
+  special: true
+  contents: "2백만원 기부"
+  when: '2022-01-07' 
+
+
+5:
+  name: 김유현
+  display_name: 유현
+  github: Enoch-Kim
+  special: true
+  contents: "2천만원 기부"
+  when: '2022-01-07' 
+
+
+6:
+  name: 이상헌
+  display_name: 상헌
+  github: lsh110600
+  special: true
+  contents: "12억 기부"
+  when: '2021-12-03'

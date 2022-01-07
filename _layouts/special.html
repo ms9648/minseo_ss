@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <section>
     <div class='section-title'>
         <h2>
@@ -15,6 +14,51 @@ layout: default
             <div class='article-post'>
                 {{content}}
             </div>
+            <!-- Link Swiper's CSS -->
+            <link
+                rel="stylesheet"
+                href="https://unpkg.com/swiper/swiper-bundle.min.css"
+            />
+            <body class = 'Special-Swiper-Body'>
+                <!-- Swiper -->
+                <div #swiperRef="" class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        {% assign authors = site.data.detail | where: 'special', 'true' %}
+                        {% for author in authors %}
+                            <div class="swiper-slide">
+                                <div class = "swipe-card">
+                                    {% if site.lazyimages == "enabled" %}
+                                    <button id="go" class = "button">
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                                        data-src="https://github.com/{{author.github}}.png" alt="{{ author.name }}">
+                                    </button>
+                                    <div id="bg" class = "hidden"></div>
+                                    <div id='popup' class = 'hidden'>
+                                        {{ author.contents }}
+                                    </div>
+                                    {% else %}
+                                    <button id="go" class = "button">
+                                        <img src="https://github.com/{{author.github}}.png" alt="{{ author.name }}">
+                                    </button>
+                                    <div id="bg" class = "hidden"></div>
+                                    <div id='popup' class = 'hidden'>
+                                        <div id = 'popup-text'>{{ author.contents }}</div>
+                                        <button id="exit" class = "button">나가기</button>
+                                    </div>
+                                    {% endif %}
+                                    <div class = "card-text">
+                                        {{ author.contents }}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                        
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </body>
         </div>
 
         <div class='alumni-info-container'>
@@ -29,32 +73,66 @@ layout: default
             </div>
         </div>
     </div>
-
-
-    <script>
-        /* Slide */
-        const tabs = {
-            about: document.querySelector('.section-title .active'),
-            alumni: document.querySelector('.section-title .deactive')
-        }
-        const infoContainer = document.querySelector('.member-alumni-container');
-        const memberContainer = document.querySelector('.member-info-container');
-        const alumniContainer = document.querySelector('.alumni-info-container');
-        tabs.about.addEventListener('click', (e) => {
-            tabs.about.classList.add('active');
-            tabs.alumni.classList.remove('active');
-            memberContainer.classList.add('slide-right');
-            alumniContainer.classList.add('slide-right');
-            memberContainer.classList.remove('slide-left');
-            alumniContainer.classList.remove('slide-left');
-        });
-        tabs.alumni.addEventListener('click', (e) => {
-            tabs.about.classList.remove('active');
-            tabs.alumni.classList.add('active');
-            memberContainer.classList.remove('slide-right');
-            alumniContainer.classList.remove('slide-right');
-            memberContainer.classList.add('slide-left');
-            alumniContainer.classList.add('slide-left');
-        });
-    </script>
 </section>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 5,
+        centeredSlides: true,
+        spaceBetween: 30,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+    /* Slide */
+    const tabs = {
+        about: document.querySelector('.section-title .active'),
+        alumni: document.querySelector('.section-title .deactive')
+    }
+    const infoContainer = document.querySelector('.member-alumni-container');
+    const memberContainer = document.querySelector('.member-info-container');
+    const alumniContainer = document.querySelector('.alumni-info-container');
+    tabs.about.addEventListener('click', (e) => {
+        tabs.about.classList.add('active');
+        tabs.alumni.classList.remove('active');
+        memberContainer.classList.add('slide-right');
+        alumniContainer.classList.add('slide-right');
+        memberContainer.classList.remove('slide-left');
+        alumniContainer.classList.remove('slide-left');
+    });
+    tabs.alumni.addEventListener('click', (e) => {
+        tabs.about.classList.remove('active');
+        tabs.alumni.classList.add('active');
+        memberContainer.classList.remove('slide-right');
+        alumniContainer.classList.remove('slide-right');
+        memberContainer.classList.add('slide-left');
+        alumniContainer.classList.add('slide-left');
+    });
+    const go = document.querySelector("#go");
+    const bg = document.querySelector("#bg");
+    const popup = document.querySelector("#popup");
+    const exit = document.querySelector("#exit");
+
+    go.addEventListener("click",function(){
+        bg.classList.remove("hidden");
+        popup.classList.remove("hidden");
+    });
+    exit.addEventListener("click",function(){
+        bg.classList.add("hidden");
+        popup.classList.add("hidden");
+    });
+</script>
+
+
