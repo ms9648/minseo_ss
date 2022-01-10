@@ -28,27 +28,12 @@ layout: default
                             <div class="swiper-slide">
                                 <div class = "swipe-card">
                                     {% if site.lazyimages == "enabled" %}
-                                    <button id="go" class = "button">
                                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-                                        data-src="https://github.com/{{author.github}}.png" alt="{{ author.name }}">
-                                    </button>
-                                    <div id="bg" class = "hidden"></div>
-                                    <div id='popup' class = 'hidden'>
-                                        {{ author.contents }}
-                                    </div>
+                                            data-src="https://github.com/{{author.github}}.png" alt="{{ author.name }}"><div class = "card-text"><p>{{ author.contents }}</p></div>
                                     {% else %}
-                                    <button id="go" class = "button">
-                                        <img src="https://github.com/{{author.github}}.png" alt="{{ author.name }}">
-                                    </button>
-                                    <div id="bg" class = "hidden"></div>
-                                    <div id='popup' class = 'hidden'>
-                                        <div id = 'popup-text'>{{ author.contents }}</div>
-                                        <button id="exit" class = "button">나가기</button>
-                                    </div>
+                                        <img src="https://github.com/{{author.github}}.png" alt="{{ author.name }}"><div class = "card-text"><p>{{ author.contents }}</p></div>
                                     {% endif %}
-                                    <div class = "card-text">
-                                        {{ author.contents }}
-                                    </div>
+                                    
                                 </div>
                             </div>
                         {% endfor %}
@@ -119,19 +104,6 @@ layout: default
         alumniContainer.classList.remove('slide-right');
         memberContainer.classList.add('slide-left');
         alumniContainer.classList.add('slide-left');
-    });
-    const go = document.querySelector("#go");
-    const bg = document.querySelector("#bg");
-    const popup = document.querySelector("#popup");
-    const exit = document.querySelector("#exit");
-
-    go.addEventListener("click",function(){
-        bg.classList.remove("hidden");
-        popup.classList.remove("hidden");
-    });
-    exit.addEventListener("click",function(){
-        bg.classList.add("hidden");
-        popup.classList.add("hidden");
     });
 </script>
 

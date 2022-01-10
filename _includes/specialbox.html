@@ -32,8 +32,29 @@
                             class="fas fa-blog"></i></a></span>
                 {% endif %}
                 {% if author.special %}
-                <span class="author-icon"><a class="link-dark" href="{{ site.baseurl }}/special-detail"><i
-                    class="fas fa-donate"></i></a></span>
+                    <button class = "btn"><i class="fab fa-angellist"></i></button>
+                    <div class = "container1">
+                        <div class = "black"></div>
+                        <div class = "pop_wrap">
+                            <div class = "pop">
+                                <div class = "top">
+                                    <div class = "t1">MODAL POP-UP</div>
+                                    <div class = "close1"></div>
+                                </div>
+                                <div class = "content2">
+                                    <div class = "t2">
+                                        <p>
+                                            팝업 내용
+                                        </p>
+                                        <p>
+                                            팝업 내용 2
+                                        </p>
+                                    </div>
+                                    <button class = "close2"> 닫기 </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 {% endif %}
             </div>
 
@@ -46,3 +67,14 @@
 
 {% endif %}
 <!-- end post -->
+
+<script src = "https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(".btn").click(function(){
+        $(".container1").css({display:"block"});
+    });
+
+    $(".pop .close1 , .pop .close2").click(function(){
+        $(".container1").css({display: "none"});
+    });
+</script>
