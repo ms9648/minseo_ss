@@ -1,6 +1,6 @@
 <!-- begin authorbox -->
 {% capture className %} img-circle {% endcapture %}
-{% if author.blog_team == true %}
+{% if author.special == true %}
 {% capture className %} img-circle author-blog-team-border {% endcapture %}
 {% endif %}
 <!-- conditional-rendering authorbox or blank -->
@@ -31,31 +31,47 @@
                 <span class="author-icon"><a class="link-dark" href="{{ author.web }}"><i
                             class="fas fa-blog"></i></a></span>
                 {% endif %}
-                {% if author.special %}
-                    <button class = "btn"><i class="fab fa-angellist"></i></button>
-                    <div class = "container1">
-                        <div class = "black"></div>
-                        <div class = "pop_wrap">
-                            <div class = "pop">
-                                <div class = "top">
-                                    <div class = "t1">MODAL POP-UP</div>
-                                    <div class = "close1"></div>
+                <button class = "btn1"><i class="fas fa-hand-holding-usd"></i></button>
+                
+                <div class = "container1">
+                    <div class = "black"></div>
+                    <div class = "pop_wrap">
+                        <div class = "pop">
+                            <div class = "top">
+                                <div class = "t1">후원자 정보</div>
+                            </div>
+                            <hr width = "90%">
+                            <div class = "content2">
+                                <div class="special-img">
+                                    {% if site.lazyimages == "enabled" %}
+                                    {% assign className = className | append: " lazyimg" %}
+                                    <img class= "{{ className }}"
+                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                                        data-src="https://github.com/{{author.github}}.png" alt="{{ author.name }}">
+                                    {% else %}
+                                    <img class= "{{ className }}" src="https://github.com/{{author.github}}.png" alt="{{ author.name }}">
+                                    {% endif %}
                                 </div>
-                                <div class = "content2">
-                                    <div class = "t2">
-                                        <p>
-                                            팝업 내용
-                                        </p>
-                                        <p>
-                                            팝업 내용 2
-                                        </p>
+                                <div class = "special-body">
+                                    <div class = "text">
+                                        <b>{{ author.name }}</b>
+                                        <b>{{ author.comment }}</b>
                                     </div>
-                                    <button class = "close2"> 닫기 </button>
                                 </div>
                             </div>
+                            <div class = 'special-title'>
+                                <b>후원 내역</b>
+                            </div>
+                            <hr width = "90%">
+                            <div class = "t2">
+                                {% assign contents = detail.contents %}
+                                {% assign specials = site.data.detail%}
+                                <li>{{ author.contents }}</li>
+                            </div>
+                            <button class = "close2"><i class="fas fa-door-open"></i></button>
                         </div>
                     </div>
-                {% endif %}
+                </div>
             </div>
 
         </div>
@@ -68,13 +84,12 @@
 {% endif %}
 <!-- end post -->
 
-<script src = "https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script>
-    $(".btn").click(function(){
+    $(".btn1").click(function(){
         $(".container1").css({display:"block"});
     });
 
-    $(".pop .close1 , .pop .close2").click(function(){
+    $(".pop .close2").click(function(){
         $(".container1").css({display: "none"});
     });
 </script>

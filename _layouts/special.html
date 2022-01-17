@@ -29,9 +29,9 @@ layout: default
                                 <div class = "swipe-card">
                                     {% if site.lazyimages == "enabled" %}
                                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-                                            data-src="https://github.com/{{author.github}}.png" alt="{{ author.name }}"><div class = "card-text"><p>{{ author.contents }}</p></div>
+                                            data-src="https://github.com/{{author.github}}.png" alt="{{ author.name }}"><div class = "card-text">{{ author.contents }}</div>
                                     {% else %}
-                                        <img src="https://github.com/{{author.github}}.png" alt="{{ author.name }}"><div class = "card-text"><p>{{ author.contents }}</p></div>
+                                        <img src="https://github.com/{{author.github}}.png" alt="{{ author.name }}"><div class = "card-text">{{ author.contents }}</div>
                                     {% endif %}
                                     
                                 </div>
